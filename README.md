@@ -10,7 +10,6 @@ Você pode:
 > O sistema reconhece múltiplos formatos de geometria dentro do KML, incluindo `Polygon`, `LineString`, `MultiGeometry` e anéis internos (furos).
 
 
-<br/><br/>
 ## 🐳 Como executar com Docker
 
 ### 1. Subir a aplicação
@@ -21,7 +20,7 @@ Executar: docker-compose up --build
 Acessar em: http://localhost:5000
 ```
 
-<br/><br/>
+
 ## 🖼️ Aplicação
 
 ### Exemplo
