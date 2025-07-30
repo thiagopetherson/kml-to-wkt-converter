@@ -1,6 +1,6 @@
 # KML to WKT Converter (via Flask + Docker)
 
-Este projeto é uma aplicação web simples construída com **Flask (Python)** que permite converter arquivos **KML** em representações **WKT** (Well-Known Text), muito úteis em bancos de dados geoespaciais como MySQL, PostGIS, etc.
+Este projeto é uma aplicação web simples construída com **Flask (Python)** que permite converter arquivos **KML** em representações **WKT** (Well-Known Text), muito úteis em bancos de dados geoespaciais como MySQL, PostGIS, etc. Código todo comentado para que o programador que for lê-lo consiga interpretar e entender o que cada linha de código faz.
 
 Você pode:
 - Fazer **upload** de arquivos `.kml` ou colar diretamente o conteúdo KML.
