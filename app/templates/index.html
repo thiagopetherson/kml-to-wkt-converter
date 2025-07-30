@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>KML para WKT</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      margin-top: 10px;
+    }
+    .output {
+      white-space: pre-wrap;
+      background-color: #f4f4f4;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Conversor de KML para WKT</h1>
+
+  <form method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="kml_file">Selecione um arquivo .kml:</label><br>
+      <input type="file" name="kml_file" accept=".kml">
+    </div>
+
+    <div class="form-group">
+      <label for="kml_text">Ou cole o conteúdo do arquivo KML aqui:</label><br>
+      <textarea name="kml_text" placeholder="Cole aqui o conteúdo do seu arquivo KML..."></textarea>
+    </div>
+
+    <div class="form-group">
+      <button type="submit">Converter</button>
+      <button type="submit" name="download" value="1">Converter e Baixar</button>
+    </div>
+  </form>
+
+  {% if wkt %}
+    <h2>Resultado (WKT):</h2>
+    <textarea id="wkt_result" readonly>{{ wkt }}</textarea>
+    <button onclick="copyWKT()">Copiar WKT</button>
+
+    <script>
+      function copyWKT() {
+        const wktText = document.getElementById("wkt_result");
+        wktText.select();
+        wktText.setSelectionRange(0, 999999); // Mobile
+        document.execCommand("copy");
+        alert("WKT copiado para a área de transferência.");
+      }
+    </script>
+  {% endif %}
+
+</body>
+</html>
